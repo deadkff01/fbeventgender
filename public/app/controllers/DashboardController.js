@@ -96,7 +96,7 @@ app.controller('DashboardController', ['$scope', '$http', '$q', 'authToken',
                     }
         );
     }
-
+    
     function firstNamesReq() {
         var def = $q.defer();
               FB.api('https://graph.facebook.com/'+$scope.eventId.value+'/attending?pretty=0&limit='+1300,
@@ -111,7 +111,7 @@ app.controller('DashboardController', ['$scope', '$http', '$q', 'authToken',
                        }
                      }
               );
-            return def.promise;
+          return def.promise;
     }
 
     function nextNames() {

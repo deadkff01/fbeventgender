@@ -33,5 +33,5 @@ app.use(function(req, res) {
 
 app.listen(666);
 console.log(__dirname);
-console.log('running server at 8000');
+console.log('running server at 666');
 
