@@ -1,2 +1,2 @@
-# fbeventgender
+# fbeventgender [![Build Status](https://travis-ci.org/deadkff01/fbeventgender.svg?branch=master)](https://travis-ci.org/deadkff01/fbeventgender) [![Dependency Status](https://david-dm.org/deadkff01/fbeventgender.svg)](https://david-dm.org/deadkff01/fbeventgender) [![devDependency Status](https://david-dm.org/deadkff01/fbeventgender/dev-status.svg)](https://david-dm.org/deadkff01/fbeventgender#info=devDependencies)
 Facebook event gender with brute force.
