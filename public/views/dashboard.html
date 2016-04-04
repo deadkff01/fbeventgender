@@ -1,0 +1,69 @@
+<div ng-controller="DashboardController">
+        <label for="eventId">Event ID:</label>
+    	<input id="eventId" type="text" class=" form-control" style="margin-bottom: 10px" runat="server" ng-model="eventId.value" />
+        <p>
+            <input type="button" class="btn btn-primary" ng-click="search()" id="mybtn" value="M A T C H !">
+        </p>
+
+	<h1 style="font-size:20px;">Event name: {{eventname}}</h1>
+
+	<h1 style="font-size:20px;">Demographics</h1>
+<div class="clearfix" style="margin-top:20px">
+
+			<div style="float: left; margin-left: 20px;">
+			 <h1 style="font-size:20px;">Male</h1>
+                <div class="c100 p{{allMatches.malepercentage}} big">
+
+                    <span>{{allMatches.malepercentage}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                   
+                </div>
+                 
+            </div>
+
+			<div style="float: left; margin-left: 20px;">
+			 <h1 style="font-size:20px;">Female</h1>
+                <div class="c100 p{{allMatches.femalepercentage}} big pink">
+                    <span>{{allMatches.femalepercentage}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                   
+                </div>
+                
+            </div>
+
+			<div style="float: left; margin-left: 20px;">
+			<h1 style="font-size:20px;">Total attending matched</h1>
+                <div class="c100 p{{allMatches.matched}} big orange">
+                    <span>{{allMatches.matched}}%</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+<div class="container">
+  <h2>Users mapped: {{mappedAttending | number}}</h2>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:{{mappedPercent}}%">
+      <span>{{mappedPercent}}% Complete</span>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="font-size: 20px">
+    <span>Male matched count: {{maleCount | number}}</span><br>
+    <span>Female matched count: {{femaleCount | number}}</span><br>
+    <span>Total user matched: {{maleCount+femaleCount | number}} of {{eventAttendingCount | number}}</span>
+</div>
+
+</div>
+
