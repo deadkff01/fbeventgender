@@ -8,7 +8,23 @@
 
 The application uses the Facebook Graph API and is subject to limitations.
 
-<a href="https://developers.facebook.com/docs/graph-api/advanced/rate-limiting" target="_blank">API rate limiting</a>
+<a href="https://developers.facebook.com/docs/graph-api/advanced/rate-limiting">API rate limiting</a>
+
+## How to use
+
+First of all, is required have an Facebook App <a href="https://developers.facebook.com/" >See more</a>
+
+After, it's just put the id of app here `app.js`:
+```js
+window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{ID_OF_YOUR_APP}',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+```
+make a login with an account and you have it.
 
 ## How does it work
 
