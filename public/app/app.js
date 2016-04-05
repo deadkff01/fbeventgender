@@ -2,7 +2,7 @@ var app = angular.module('fbeventgender', ['ngRoute', 'ngCookies']);
 
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '1785259145029677',
+      appId      : '',
       xfbml      : true,
       version    : 'v2.5'
     });
