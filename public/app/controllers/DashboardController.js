@@ -88,9 +88,6 @@ app.controller('DashboardController', ['$scope', '$http', '$q', 'authToken',
                       if (response && !response.error) {
                        $scope.eventAttendingCount = parseInt(response.attending_count);
                        $scope.eventname = response.name;
-                       $scope.maleCount = 0;
-                       $scope.femaleCount = 0;
-                       $scope.mappedAttendings = 0;
                        $scope.$applyAsync();
                       }
                     }
@@ -132,6 +129,9 @@ app.controller('DashboardController', ['$scope', '$http', '$q', 'authToken',
     }
 
 	  $scope.search = function() {
+      $scope.maleCount = 0;
+      $scope.femaleCount = 0;
+      $scope.mappedAttending = 0;
       var chain = $q.when();
       chain.then(attCountName())
            .then(
